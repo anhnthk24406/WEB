@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Thông tin cá nhân - Nguyễn Thị Hồng Ánh</title>
+</head>
+
+<body>
+
+    <form name="mycontact">
+        <fieldset style="width: 400px;">
+            <legend>Thông tin cá nhân</legend>
+
+            <table>
+                <tr>
+                    <td>Họ và tên:</td>
+                    <td>
+                        <input type="text" name="name" id="name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Ngày sinh:</td>
+                    <td>
+                        <input type="date" name="birth" id="birth">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Giới tính:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Nam" id="nam">
+                        <label for="nam">Nam</label>
+
+                        <input type="radio" name="gender" value="Nữ" id="nu">
+                        <label for="nu">Nữ</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Quốc tịch:</td>
+                    <td>
+                        <select name="nationality" id="nationality">
+                            <option value="">--Chọn quốc tịch--</option>
+                            <option value="Vietnam">Việt Nam</option>
+                            <option value="USA">Mỹ</option>
+                            <option value="Japan">Nhật Bản</option>
+                            <option value="Korea">Hàn Quốc</option>
+                            <option value="China">Trung Quốc</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">Gửi</button>
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
