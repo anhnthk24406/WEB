@@ -1,0 +1,290 @@
+<html>
+    <head>
+        <title>Bài 49</title>
+        <style>
+            /* Toàn bộ trang */
+            body {
+                font-family: "Times New Roman", serif;
+                font-size: 14px;
+            }
+
+            /* Khung form */
+            #container {
+                width: 600px;
+                margin: auto;
+                padding: 10px;
+
+                background-color: #ccffff;
+                border: 2px solid #3399ff;
+            }
+
+            /* Tiêu đề */
+            h2 {
+                color: red;
+                margin-top: 5px;
+            }
+
+            /* Đường kẻ */
+            hr {
+                border: 0;
+                border-top: 1px solid gray;
+            }
+
+            /* Khoảng cách giữa các phần */
+            .section {
+                margin-top: 18px;
+                margin-bottom: 18px;
+            }
+
+            /* Khu vực lựa chọn radio */
+            .radio-group {
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+
+            /* Khu vực checkbox */
+            .checkbox-group {
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+
+            /* Ô nhập từ khóa */
+            .keyword {
+                width: 500px;
+            }
+
+            /* Khu vực 3 nút */
+            #buttons {
+                margin-top: 15px;
+            }
+
+            /* Mỗi nút */
+            .button-item {
+                display: inline-block;
+                text-align: center;
+                margin-right: 25px;
+            }
+
+            /* Hình nút */
+            .button-item img {
+                display: block;
+                margin: auto;
+                cursor: pointer;
+            }
+
+            /* Chữ dưới hình */
+            .search-text {
+                color: green;
+            }
+
+            .help-text {
+                color: blue;
+            }
+
+            .cancel-text {
+                color: #ff0066;
+            }
+        </style>
+
+        <script>
+
+            /* Nút Search */
+            function searchClassified() {
+                alert("Search");
+            }
+
+            /* Nút Help */
+            function showHelp() {
+                alert("Hãy chọn mục cần tìm kiếm, chọn báo và nhập từ khóa để tìm kiếm.");
+            }
+
+            /* Nút Cancel */
+            function cancelForm() {
+                document.getElementById("classifiedForm").reset();
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="container">
+
+            <h2>Online Classifieds Search Form</h2>
+
+            <hr>
+
+            <form id="classifiedForm">
+
+                <!-- PHẦN 1 -->
+                <div class="section">
+
+                    <b>
+                        1) Search for a classified in the following sections:
+                    </b>
+
+                    <div class="radio-group">
+
+                        <input type="radio"
+name="section"
+                               value="Employment">
+                        Employment
+
+                        &nbsp;&nbsp;&nbsp;
+
+                        <input type="radio"
+                               name="section"
+                               value="Personal">
+                        Personal
+
+                        <br>
+
+
+                        <input type="radio"
+                               name="section"
+                               value="For Sale">
+                        For Sale
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <input type="radio"
+                               name="section"
+                               value="Miscellaneous">
+                        Miscellaneous
+
+                        <br>
+
+                        <input type="radio"
+                               name="section"
+                               value="Housing">
+                        Housing
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <input type="radio"
+                               name="section"
+                               value="All">
+                        All of the above
+
+                    </div>
+
+                </div>
+
+                <!-- PHẦN 2 -->
+                <div class="section">
+
+                    <b>
+                        2) Search the following publications:
+                    </b>
+
+                    <div class="checkbox-group">
+
+                        <input type="checkbox"
+                               name="publication"
+                               value="Midwest Times"
+                               checked>
+                        Midwest times
+
+                        &nbsp;&nbsp;
+
+                        <input type="checkbox"
+                               name="publication"
+                               value="Modern News">
+                        Modern News
+
+                        &nbsp;&nbsp;
+
+                        <input type="checkbox"
+                               name="publication"
+                               value="Employment Today">
+                        Employment Today
+
+                        <br>
+
+                        <input type="checkbox"
+                               name="publication"
+                               value="Great Lakes Classifieds"
+                               checked>
+                        Great Lakes Classifieds
+
+                        &nbsp;
+
+                        <input type="checkbox"
+                               name="publication"
+                               value="Middleton Daily">
+                        Middleton Daily
+
+                        &nbsp;
+
+                        <input type="checkbox"
+                               name="publication"
+                               value="Cashtown Daily News">
+                        Cashtown Daily News
+
+                    </div>
+
+                </div>
+<!-- PHẦN 3 -->
+                <div class="section">
+
+                    <b>3) From</b>
+
+                    <input type="text"
+                           name="fromDate"
+                           placeholder="mm/dd/yy"
+                           size="12">
+
+                    <b>to</b>
+
+                    <input type="text"
+                           name="toDate"
+                           placeholder="mm/dd/yy"
+                           size="12">
+
+                </div>
+
+                <!-- PHẦN 4 -->
+                <div class="section">
+
+                    <b>
+                        4) Enter a few keywords to describe the classified.
+                    </b>
+
+                    <br><br>
+
+                    <input type="text"
+                           name="keyword"
+                           class="keyword">
+
+                </div>
+
+                <!-- PHẦN 5 -->
+                <div class="section">
+
+                    <b>
+                        5) Click one of the options below:
+                    </b>
+                    </div>
+                     <button type="button" onclick="searchClassified()">
+                    <img src="images/Search.gif">
+                </button>
+                <button type="button" onclick="showHelp()">
+                    <img src="images/Help.gif">
+                </button>
+                <button type="reset" onclick="cancelForm()">
+                    <img src="images/Cancel.gif">
+                </button>
+                    
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>

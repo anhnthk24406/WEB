@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ex 48</title>
+
+    <script>
+        function register() {
+            const firstName = document.getElementById("first_name").value;
+            const lastName = document.getElementById("last_name").value;
+            const product = document.getElementById("product").value;
+
+            alert(
+                "Đăng ký thành công!\n" +
+                "Họ tên: " + firstName + " " + lastName + "\n" +
+                "Sản phẩm: " + product
+            );
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #99ccff;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 520px;
+            margin: auto;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo img {
+            width: 287px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        table {
+            width: 520px;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 2px 0;
+            vertical-align: middle;
+        }
+
+        .label {
+            width: 180px;
+        }
+
+        input[type="text"] {
+            height: 20px;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        #first_name,
+        #last_name {
+            width: 112px;
+        }
+
+        #address1,
+        #address2 {
+            width: 202px;
+        }
+
+        #city {
+            width: 142px;
+        }
+
+        #state {
+            width: 42px;
+        }
+
+        #zip {
+            width: 70px;
+        }
+
+        #country {
+            width: 142px;
+        }
+
+        #product {
+            width: 118px;
+            height: 21px;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        #data_purchased,
+        #serial {
+            width: 142px;
+        }
+
+        textarea {
+            width: 340px;
+            height: 100px;
+            resize: none;
+        }
+
+        .line {
+            border-top: 1px solid #666;
+            height: 8px;
+        }
+
+        .button-area {
+            padding-top: 4px;
+        }
+
+        button {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14px;
+            padding: 2px 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <img src="images/Jackson.gif" alt="Jackson Electronics">
+        </div>
+
+        <h2>Registration Form</h2>
+
+        <div class="description">
+            Register your Jackson Electronics product here
+        </div>
+
+        <form name="registration">
+            <table>
+
+                <tr>
+                    <td class="label">First Name:</td>
+                    <td><input type="text" name="first_name" id="first_name"></td>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="last_name" id="last_name"></td>
+                </tr>
+
+                <tr>
+                    <td class="label">Address #1:</td>
+                    <td colspan="3">
+                        <input type="text" name="address1" id="address1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Address #2:</td>
+                    <td colspan="3">
+                        <input type="text" name="address2" id="address2">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">City:</td>
+                    <td><input type="text" name="city" id="city"></td>
+                    <td>State:</td>
+                    <td>
+                        <input type="text" name="state" id="state">
+                        Zip:
+                        <input type="text" name="zip" id="zip">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Country:</td>
+                    <td>
+                        <input type="text"
+                               name="country"
+                               id="country"
+                               value="United States">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4"><div class="line"></div></td>
+                </tr>
+
+                <tr>
+                    <td class="label">Product:</td>
+                    <td>
+                        <select name="product" id="product">
+                            <option>ScanMaster</option>
+                            <option>Master</option>
+                            <option>Tea</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Date Purchased:</td>
+                    <td>
+                        <input type="text"
+                               name="date_purchased"
+                               id="data_purchased">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Serial #:</td>
+                    <td>
+                        <input type="text"
+                               name="serial"
+                               id="serial">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">Used for:</td>
+                    <td colspan="3">
+
+                        <input type="radio" name="used_for" id="used_for1" value="Home">
+                        <label for="used_for1">Home</label>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <input type="radio" name="used_for" id="used_for2" value="Educational Institution">
+                        <label for="used_for2">Educational Institution</label>
+
+                        <br>
+
+                        <input type="radio" name="used_for" id="used_for3" value="Business" checked>
+                        <label for="used_for3">Business</label>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <input type="radio" name="used_for" id="used_for4" value="Other">
+                        <label for="used_for4">Other</label>
+
+                        <br>
+
+                        <input type="radio" name="used_for" id="used_for5" value="Government">
+                        <label for="used_for5">Government</label>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">System (check all that apply):</td>
+                    <td colspan="3">
+
+                        <input type="checkbox" name="system" id="system1" value="Windows">
+                        <label for="system1">Windows</label>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <input type="checkbox" name="system" id="system2" value="UNIX">
+                        <label for="system2">UNIX</label>
+
+                        <br>
+
+                        <input type="checkbox" name="system" id="system3" value="Macintosh">
+                        <label for="system3">Macintosh</label>
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <input type="checkbox" name="system" id="system4" value="Other">
+                        <label for="system4">Other</label>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4"><div class="line"></div></td>
+                </tr>
+
+                <tr>
+                    <td class="label">Comments?:</td>
+                    <td colspan="3">
+                        <textarea name="comments" id="comments"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td colspan="3" class="button-area">
+
+                        <button type="button" onclick="register()">
+                            Click to register
+                        </button>
+
+                        <button type="reset">
+                            Click to cancel
+                        </button>
+
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+
+    </div>
+
+</body>
+</html>
